@@ -24,5 +24,12 @@ namespace CoffeeMakingTesting
             string actual = result.OrderCoffee(5, 10);
                 Assert.AreEqual(actual, "Your Coffee is Recieve");
         }
+        [TestMethod]
+        public void OrderCoffeeStub_InStarBucks_ShouldReturnRecieveMessage()
+        {
+            StarBuksStore store = new StarBuksStore(new FakeStarBuks());
+            string actual = store.OrderCoffee(5, 10);
+            Assert.AreEqual(actual, "Your Coffee is Recieve");
+        }
     }
 }
